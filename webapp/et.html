@@ -1,0 +1,4137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="NONE,NOARCHIVE">
+	<title>UnboundLocalError
+		at /home/hashtags</title>
+	<style type="text/css">
+		html * {
+			padding: 0;
+			margin: 0;
+		}
+
+		body * {
+			padding: 10px 20px;
+		}
+
+		body * * {
+			padding: 0;
+		}
+
+		body {
+			font: small sans-serif;
+			background-color: #fff;
+			color: #000;
+		}
+
+		body>div {
+			border-bottom: 1px solid #ddd;
+		}
+
+		h1 {
+			font-weight: normal;
+		}
+
+		h2 {
+			margin-bottom: .8em;
+		}
+
+		h3 {
+			margin: 1em 0 .5em 0;
+		}
+
+		h4 {
+			margin: 0 0 .5em 0;
+			font-weight: normal;
+		}
+
+		code,
+		pre {
+			font-size: 100%;
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		summary {
+			cursor: pointer;
+		}
+
+		table {
+			border: 1px solid #ccc;
+			border-collapse: collapse;
+			width: 100%;
+			background: white;
+		}
+
+		tbody td,
+		tbody th {
+			vertical-align: top;
+			padding: 2px 3px;
+		}
+
+		thead th {
+			padding: 1px 6px 1px 3px;
+			background: #fefefe;
+			text-align: left;
+			font-weight: normal;
+			font-size: 11px;
+			border: 1px solid #ddd;
+		}
+
+		tbody th {
+			width: 12em;
+			text-align: right;
+			color: #666;
+			padding-right: .5em;
+		}
+
+		table.vars {
+			margin: 5px 10px 2px 40px;
+			width: auto;
+		}
+
+		table.vars td,
+		table.req td {
+			font-family: monospace;
+		}
+
+		table td.code {
+			width: 100%;
+		}
+
+		table td.code pre {
+			overflow: hidden;
+		}
+
+		table.source th {
+			color: #666;
+		}
+
+		table.source td {
+			font-family: monospace;
+			white-space: pre;
+			border-bottom: 1px solid #eee;
+		}
+
+		ul.traceback {
+			list-style-type: none;
+			color: #222;
+		}
+
+		ul.traceback li.cause {
+			word-break: break-word;
+		}
+
+		ul.traceback li.frame {
+			padding-bottom: 1em;
+			color: #4f4f4f;
+		}
+
+		ul.traceback li.user {
+			background-color: #e0e0e0;
+			color: #000
+		}
+
+		div.context {
+			padding: 10px 0;
+			overflow: hidden;
+		}
+
+		div.context ol {
+			padding-left: 30px;
+			margin: 0 10px;
+			list-style-position: inside;
+		}
+
+		div.context ol li {
+			font-family: monospace;
+			white-space: pre;
+			color: #777;
+			cursor: pointer;
+			padding-left: 2px;
+		}
+
+		div.context ol li pre {
+			display: inline;
+		}
+
+		div.context ol.context-line li {
+			color: #464646;
+			background-color: #dfdfdf;
+			padding: 3px 2px;
+		}
+
+		div.context ol.context-line li span {
+			position: absolute;
+			right: 32px;
+		}
+
+		.user div.context ol.context-line li {
+			background-color: #bbb;
+			color: #000;
+		}
+
+		.user div.context ol li {
+			color: #666;
+		}
+
+		div.commands,
+		summary.commands {
+			margin-left: 40px;
+		}
+
+		div.commands a,
+		summary.commands {
+			color: #555;
+			text-decoration: none;
+		}
+
+		.user div.commands a {
+			color: black;
+		}
+
+		#summary {
+			background: #ffc;
+		}
+
+		#summary h2 {
+			font-weight: normal;
+			color: #666;
+		}
+
+		#explanation {
+			background: #eee;
+		}
+
+		#template,
+		#template-not-exist {
+			background: #f6f6f6;
+		}
+
+		#template-not-exist ul {
+			margin: 0 0 10px 20px;
+		}
+
+		#template-not-exist .postmortem-section {
+			margin-bottom: 3px;
+		}
+
+		#unicode-hint {
+			background: #eee;
+		}
+
+		#traceback {
+			background: #eee;
+		}
+
+		#requestinfo {
+			background: #f6f6f6;
+			padding-left: 120px;
+		}
+
+		#summary table {
+			border: none;
+			background: transparent;
+		}
+
+		#requestinfo h2,
+		#requestinfo h3 {
+			position: relative;
+			margin-left: -100px;
+		}
+
+		#requestinfo h3 {
+			margin-bottom: -1em;
+		}
+
+		.error {
+			background: #ffc;
+		}
+
+		.specific {
+			color: #cc3300;
+			font-weight: bold;
+		}
+
+		h2 span.commands {
+			font-size: .7em;
+			font-weight: normal;
+		}
+
+		span.commands a:link {
+			color: #5E5694;
+		}
+
+		pre.exception_value {
+			font-family: sans-serif;
+			color: #575757;
+			font-size: 1.5em;
+			margin: 10px 0 10px 0;
+		}
+
+		.append-bottom {
+			margin-bottom: 10px;
+		}
+
+		.fname {
+			user-select: all;
+		}
+	</style>
+
+	<script>
+		function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(document.querySelectorAll('ol.pre-context'));
+      hideAll(document.querySelectorAll('ol.post-context'));
+      hideAll(document.querySelectorAll('div.pastebin'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block': 'none';
+        }
+      }
+      return false;
+    }
+    function switchPastebinFriendly(link) {
+      s1 = "Switch to copy-and-paste view";
+      s2 = "Switch back to interactive view";
+      link.textContent = link.textContent.trim() == s1 ? s2: s1;
+      toggle('browserTraceback', 'pastebinTraceback');
+      return false;
+    }
+	</script>
+
+</head>
+
+<body>
+	<div id="summary">
+		<h1>UnboundLocalError
+			at /home/hashtags</h1>
+		<pre
+			class="exception_value">cannot access local variable &#x27;tk&#x27; where it is not associated with a value</pre>
+		<table class="meta">
+
+			<tr>
+				<th>Request Method:</th>
+				<td>POST</td>
+			</tr>
+			<tr>
+				<th>Request URL:</th>
+				<td>http://127.0.0.1:8000/home/hashtags</td>
+			</tr>
+
+			<tr>
+				<th>Django Version:</th>
+				<td>4.2.4</td>
+			</tr>
+
+			<tr>
+				<th>Exception Type:</th>
+				<td>UnboundLocalError</td>
+			</tr>
+
+
+			<tr>
+				<th>Exception Value:</th>
+				<td>
+					<pre>cannot access local variable &#x27;tk&#x27; where it is not associated with a value</pre>
+				</td>
+			</tr>
+
+
+			<tr>
+				<th>Exception Location:</th>
+				<td><span class="fname">C:\Users\gkari\twitter_analysis_project\twitter_analysis\webapp\views.py</span>,
+					line 129, in post</td>
+			</tr>
+
+
+			<tr>
+				<th>Raised during:</th>
+				<td>webapp.views.HashTag</td>
+			</tr>
+
+			<tr>
+				<th>Python Executable:</th>
+				<td>C:\Users\gkari\anaconda3\envs\TwitterAnalysis\python.exe</td>
+			</tr>
+			<tr>
+				<th>Python Version:</th>
+				<td>3.11.4</td>
+			</tr>
+			<tr>
+				<th>Python Path:</th>
+				<td>
+					<pre>[&#x27;C:\\Users\\gkari\\twitter_analysis_project\\twitter_analysis&#x27;,
+ &#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\python311.zip&#x27;,
+ &#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\DLLs&#x27;,
+ &#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Lib&#x27;,
+ &#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis&#x27;,
+ &#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Lib\\site-packages&#x27;]</pre>
+				</td>
+			</tr>
+			<tr>
+				<th>Server time:</th>
+				<td>Tue, 26 Sep 2023 19:57:34 +0000</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+
+	<div id="traceback">
+		<h2>Traceback <span class="commands"><a href="#" onclick="return switchPastebinFriendly(this);">
+    Switch to copy-and-paste view</a></span>
+		</h2>
+		<div id="browserTraceback">
+			<ul class="traceback">
+
+
+				<li class="frame django">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\core\handlers\exception.py</code>,
+					line 55, in inner
+
+
+
+					<div class="context" id="c2463578496192">
+
+						<ol start="48" class="pre-context" id="pre2463578496192">
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>        return inner</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>    else:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>        @wraps(get_response)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>        def inner(request):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>            try:</pre>
+							</li>
+
+						</ol>
+
+						<ol start="55" class="context-line">
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>                response = get_response(request)
+                               ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='56' class="post-context" id="post2463578496192">
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>            except Exception as exc:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>                response = response_for_exception(request, exc)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>            return response</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre>        return inner</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578496192', 'post2463578496192')">
+								<pre></pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578496192">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>exc</td>
+									<td class="code">
+										<pre>UnboundLocalError(&quot;cannot access local variable &#x27;tk&#x27; where it is not associated with a value&quot;)</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>get_response</td>
+									<td class="code">
+										<pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x0000023D9835F6D0&gt;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;WSGIRequest: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame django">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\core\handlers\base.py</code>,
+					line 197, in _get_response
+
+
+
+					<div class="context" id="c2463578498816">
+
+						<ol start="190" class="pre-context" id="pre2463578498816">
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>        if response is None:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>            wrapped_callback = self.make_view_atomic(callback)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>            # If it is an asynchronous view, run it in a subthread.</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>            if iscoroutinefunction(wrapped_callback):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>            try:</pre>
+							</li>
+
+						</ol>
+
+						<ol start="197" class="context-line">
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='198' class="post-context" id="post2463578498816">
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>            except Exception as e:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>                response = self.process_exception_by_middleware(e, request)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>                if response is None:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>                    raise</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578498816', 'post2463578498816')">
+								<pre>        # Complain if the view returned None (a common error).</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578498816">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>callback</td>
+									<td class="code">
+										<pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x0000023D9697F560&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>callback_args</td>
+									<td class="code">
+										<pre>()</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>callback_kwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>middleware_method</td>
+									<td class="code">
+										<pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;CsrfViewMiddleware get_response=convert_exception_to_response.&lt;locals&gt;.inner&gt;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;WSGIRequest: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>response</td>
+									<td class="code">
+										<pre>None</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x0000023D9835F6D0&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>wrapped_callback</td>
+									<td class="code">
+										<pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x0000023D9697F560&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame django">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\views\decorators\csrf.py</code>,
+					line 56, in wrapper_view
+
+
+
+					<div class="context" id="c2463578497664">
+
+						<ol start="49" class="pre-context" id="pre2463578497664">
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>def csrf_exempt(view_func):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    # if they don&#x27;t have side effects, so return a new function.</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    @wraps(view_func)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    def wrapper_view(*args, **kwargs):</pre>
+							</li>
+
+						</ol>
+
+						<ol start="56" class="context-line">
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>        return view_func(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='57' class="post-context" id="post2463578497664">
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    wrapper_view.csrf_exempt = True</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578497664', 'post2463578497664')">
+								<pre>    return wrapper_view</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578497664">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>args</td>
+									<td class="code">
+										<pre>(&lt;WSGIRequest: POST &#x27;/home/hashtags&#x27;&gt;,)</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>kwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>view_func</td>
+									<td class="code">
+										<pre>&lt;function View.as_view.&lt;locals&gt;.view at 0x0000023D969A8B80&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame django">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\views\generic\base.py</code>,
+					line 104, in view
+
+
+
+					<div class="context" id="c2463578504448">
+
+						<ol start="97" class="pre-context" id="pre2463578504448">
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>            self = cls(**initkwargs)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>            self.setup(request, *args, **kwargs)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>            if not hasattr(self, &quot;request&quot;):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>                raise AttributeError(</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>                )</pre>
+							</li>
+
+						</ol>
+
+						<ol start="104" class="context-line">
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>            return self.dispatch(request, *args, **kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='105' class="post-context" id="post2463578504448">
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>        view.view_class = cls</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>        view.view_initkwargs = initkwargs</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>        # __name__ and __qualname__ are intentionally left unchanged as</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578504448', 'post2463578504448')">
+								<pre>        # view_class should be used to robustly determine the name of the view</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578504448">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>args</td>
+									<td class="code">
+										<pre>()</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>cls</td>
+									<td class="code">
+										<pre>&lt;class &#x27;webapp.views.HashTag&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>initkwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>kwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;WSGIRequest: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame user">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py</code>,
+					line 509, in dispatch
+
+
+
+					<div class="context" id="c2463578499328">
+
+						<ol start="502" class="pre-context" id="pre2463578499328">
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>                                  self.http_method_not_allowed)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>            else:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>                handler = self.http_method_not_allowed</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>            response = handler(request, *args, **kwargs)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>        except Exception as exc:</pre>
+							</li>
+
+						</ol>
+
+						<ol start="509" class="context-line">
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>            response = self.handle_exception(exc)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='510' class="post-context" id="post2463578499328">
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>        return self.response</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>    def options(self, request, *args, **kwargs):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578499328', 'post2463578499328')">
+								<pre>        &quot;&quot;&quot;</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578499328">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>args</td>
+									<td class="code">
+										<pre>()</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>handler</td>
+									<td class="code">
+										<pre>&lt;bound method HashTag.post of &lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>kwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;rest_framework.request.Request: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame user">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py</code>,
+					line 469, in handle_exception
+
+
+
+					<div class="context" id="c2463578503872">
+
+						<ol start="462" class="pre-context" id="pre2463578503872">
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        exception_handler = self.get_exception_handler()</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        context = self.get_exception_handler_context()</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        response = exception_handler(exc, context)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        if response is None:</pre>
+							</li>
+
+						</ol>
+
+						<ol start="469" class="context-line">
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>            self.raise_uncaught_exception(exc)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='470' class="post-context" id="post2463578503872">
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        response.exception = True</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        return response</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>    def raise_uncaught_exception(self, exc):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503872', 'post2463578503872')">
+								<pre>        if settings.DEBUG:</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578503872">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>context</td>
+									<td class="code">
+										<pre>{&#x27;args&#x27;: (),
+ &#x27;kwargs&#x27;: {},
+ &#x27;request&#x27;: &lt;rest_framework.request.Request: POST &#x27;/home/hashtags&#x27;&gt;,
+ &#x27;view&#x27;: &lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>exc</td>
+									<td class="code">
+										<pre>UnboundLocalError(&quot;cannot access local variable &#x27;tk&#x27; where it is not associated with a value&quot;)</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>exception_handler</td>
+									<td class="code">
+										<pre>&lt;function exception_handler at 0x0000023D9694B920&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>response</td>
+									<td class="code">
+										<pre>None</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame user">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py</code>,
+					line 480, in raise_uncaught_exception
+
+
+
+					<div class="context" id="c2463574440064">
+
+						<ol start="473" class="pre-context" id="pre2463574440064">
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>    def raise_uncaught_exception(self, exc):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>        if settings.DEBUG:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>            request = self.request</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre>
+							</li>
+
+						</ol>
+
+						<ol start="480" class="context-line">
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>        raise exc
+             ^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='481' class="post-context" id="post2463574440064">
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>    # be overridden.</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>    def dispatch(self, request, *args, **kwargs):</pre>
+							</li>
+
+							<li onclick="toggle('pre2463574440064', 'post2463574440064')">
+								<pre>        &quot;&quot;&quot;</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463574440064">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>exc</td>
+									<td class="code">
+										<pre>UnboundLocalError(&quot;cannot access local variable &#x27;tk&#x27; where it is not associated with a value&quot;)</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>renderer_format</td>
+									<td class="code">
+										<pre>&#x27;json&#x27;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;rest_framework.request.Request: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>use_plaintext_traceback</td>
+									<td class="code">
+										<pre>True</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame user">
+
+					<code class="fname">C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py</code>,
+					line 506, in dispatch
+
+
+
+					<div class="context" id="c2463578501120">
+
+						<ol start="499" class="pre-context" id="pre2463578501120">
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>            # Get the appropriate handler method</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>            if request.method.lower() in self.http_method_names:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>                handler = getattr(self, request.method.lower(),</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>                                  self.http_method_not_allowed)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>            else:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>                handler = self.http_method_not_allowed</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre></pre>
+							</li>
+
+						</ol>
+
+						<ol start="506" class="context-line">
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>            response = handler(request, *args, **kwargs)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='507' class="post-context" id="post2463578501120">
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>        except Exception as exc:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>            response = self.handle_exception(exc)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578501120', 'post2463578501120')">
+								<pre>        return self.response</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578501120">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>args</td>
+									<td class="code">
+										<pre>()</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>handler</td>
+									<td class="code">
+										<pre>&lt;bound method HashTag.post of &lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>kwargs</td>
+									<td class="code">
+										<pre>{}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;rest_framework.request.Request: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+
+				<li class="frame user">
+
+					<code class="fname">C:\Users\gkari\twitter_analysis_project\twitter_analysis\webapp\views.py</code>,
+					line 129, in post
+
+
+
+					<div class="context" id="c2463578503808">
+
+						<ol start="122" class="pre-context" id="pre2463578503808">
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        all_subreddit = []</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre></pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        for th in all_threads_comments:</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>            all_subreddit.append(th[&#x27;post&#x27;])</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>            all_subreddit = all_subreddit + th[&#x27;comments&#x27;]</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>            </pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        all_data_preprocessed = [word.lower().replace(&#x27;[^\w\s]&#x27;,&#x27;&#x27;) for word in all_subreddit]</pre>
+							</li>
+
+						</ol>
+
+						<ol start="129" class="context-line">
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        tk = [word for word in tk if word not in set(stopwords.words(&#x27;english&#x27;)) and word not in r&quot;.$/(){}!;&#x27;,#$%^&amp;*[]|\&lt;&gt;?+=*-_`\&quot;:;~&quot;]
+                                    ^^</pre> <span>…</span></li>
+						</ol>
+
+						<ol start='130' class="post-context" id="post2463578503808">
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        sent_a = SentimentIntensityAnalyzer()</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        fdist = FreqDist(tk)</pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        </pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        </pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        </pre>
+							</li>
+
+							<li onclick="toggle('pre2463578503808', 'post2463578503808')">
+								<pre>        print(len(all_data_preprocessed))</pre>
+							</li>
+
+						</ol>
+
+					</div>
+
+
+
+
+					<details>
+						<summary class="commands">Local vars</summary>
+
+						<table class="vars" id="v2463578503808">
+							<thead>
+								<tr>
+									<th>Variable</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>all_data_preprocessed</td>
+									<td class="code">
+										<pre>[&quot;tell /r/python what you&#x27;re working on this week! you can be bragging, &quot;
+ &#x27;grousing, sharing your passion, or explaining your pain. talk about your &#x27;
+ &#x27;current project or your pet project; whatever you want to share.&#x27;,
+ &#x27;got through a lot of git-based and some headless cms solutions, trying to &#x27;
+ &#x27;see if there is an option to have high-level site editing for the &#x27;
+ &#x27;&quot;marketing&quot; department and good project control for it, like keeping one &#x27;
+ &#x27;current layout always in sync for all pages. will be migrating a part of a &#x27;
+ &#x27;django project to that, likely cloudcannon editor and 11ty... assuming the &#x27;
+ &#x27;editor will work as intended.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;got some custom displays from aliexpress as well - one smartwatch like with &#x27;
+ &#x27;pi pico and the other hdmi but as a wide strip for like pc status bar. will &#x27;
+ &#x27;be using python to design some showcase ui for them (watch stuff and then &#x27;
+ &#x27;status charts and widgets).&#x27;,
+ &#x27;have a look at react bricks, too. you have true inline visual editing for &#x27;
+ &#x27;the marketing team, but you define the content blocks as react components, &#x27;
+ &#x27;so good control for it and safe design system.&#x27;,
+ &#x27;will have to look at it. it seems to be similar to bookshop in cloudcannon. &#x27;
+ &quot;didn&#x27;t have much experience with react though. ideally, it should be a &quot;
+ &#x27;static site generation in the end or something similar.&#x27;,
+ &#x27;learning how to use python in general👍&#x27;,
+ &#x27;i am working on a module to perform the unfolding statistical technique &#x27;
+ &#x27;using quantum machine learning.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;girhub: https://github.com/justwhit3/qunfold&#x27;,
+ &#x27;i’m working on (partially) getting out of google photos. symbology photos is &#x27;
+ &#x27;up and running and can be reached over the internet so my family can  see &#x27;
+ &#x27;it. photos are backing up from my wife’s and my phones. all good there.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;now i’ve gotta keep two albums in sync: an album on google and an equivalent &#x27;
+ &#x27;album on the synology. yesterday i learned enough from the google photos api &#x27;
+ &#x27;to list the photos in an album and download them. next up is finding photos &#x27;
+ &#x27;on the synology or downloading missing ones and adding them to a synology &#x27;
+ &#x27;album.&#x27;,
+ &quot;something i&#x27;ve always found frustrating when working on data science/machine &quot;
+ &#x27;learning projects is that watching long-running scripts/notebooks is a real &#x27;
+ &#x27;pain. watching them makes it hard to do anything else at the same time, but &#x27;
+ &#x27;not watching them always seems to ensure that they run into an error and &#x27;
+ &#x27;fail, which means you lose iteration time.\n&#x27;
+ &#x27;\n&#x27;
+ &quot;i&#x27;ve been working for a little while on a simple little tool that will &quot;
+ &#x27;monitor long-running scripts and notebooks, and send you a notification when &#x27;
+ &quot;they finish running. it&#x27;s called lmk, and it&#x27;s actually made my life a lot &quot;
+ &#x27;easier.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;if anyone else is interested in trying it out, you can check out the docs &#x27;
+ &#x27;[here](https://docs.lmkapp.dev)&#x27;,
+ &#x27;database client with textual&#x27;,
+ &#x27;working on a game. its basically russian roulette with viruses. you have a &#x27;
+ &#x27;1/6 chance of your pc not getting a virus. so i have to code 5 different &#x27;
+ &#x27;viruses:\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;1. delete system32\n&#x27;
+ &#x27;2. duplicate files\n&#x27;
+ &#x27;3. opens infinite command prompt windows\n&#x27;
+ &#x27;\n&#x27;
+ &quot;i&#x27;m still deciding what last 2 viruses should be. help me out by giving me &quot;
+ &#x27;some ideas.&#x27;,
+ &#x27;have some burning questions on advanced python topics? use this thread to &#x27;
+ &#x27;ask more advanced questions related to python.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;**if your question is a beginner question we hold a beginner daily thread &#x27;
+ &#x27;tomorrow (wednesday) where you can ask any question! we may remove questions &#x27;
+ &#x27;here and ask you to resubmit tomorrow.**\n&#x27;
+ &#x27;\n&#x27;
+ &quot;this thread may be fairly low volume in replies, if you don&#x27;t receive a &quot;
+ &#x27;response we recommend looking at r/learnpython or joining the python discord &#x27;
+ &#x27;server at [https://discord.gg/python](https://discord.gg/python) where you &#x27;
+ &#x27;stand a better chance of receiving a response.&#x27;,
+ &#x27;&#x27;,
+ &quot;registation wall, can&#x27;t read the article&quot;,
+ &#x27;here you go https://archive.ph/6jkdk&#x27;,
+ &quot;it&#x27;s been four months and 82 new features and enhancements since we last &quot;
+ &quot;updated you on [nicegui](ht… &lt;trimmed 126168 bytes string&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>all_subreddit</td>
+									<td class="code">
+										<pre>[&quot;Tell /r/python what you&#x27;re working on this week! You can be bragging, &quot;
+ &#x27;grousing, sharing your passion, or explaining your pain. Talk about your &#x27;
+ &#x27;current project or your pet project; whatever you want to share.&#x27;,
+ &#x27;Got through a lot of git-based and some headless CMS solutions, trying to &#x27;
+ &#x27;see if there is an option to have high-level site editing for the &#x27;
+ &#x27;&quot;marketing&quot; department and good project control for IT, like keeping one &#x27;
+ &#x27;current layout always in sync for all pages. Will be migrating a part of a &#x27;
+ &#x27;Django project to that, likely cloudcannon editor and 11ty... assuming the &#x27;
+ &#x27;editor will work as intended.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;Got some custom displays from Aliexpress as well - one smartwatch like with &#x27;
+ &#x27;Pi Pico and the other HDMI but as a wide strip for like PC status bar. Will &#x27;
+ &#x27;be using Python to design some showcase UI for them (watch stuff and then &#x27;
+ &#x27;status charts and widgets).&#x27;,
+ &#x27;Have a look at React Bricks, too. You have true inline visual editing for &#x27;
+ &#x27;the marketing team, but you define the content blocks as React components, &#x27;
+ &#x27;so good control for IT and safe design system.&#x27;,
+ &#x27;Will have to look at it. It seems to be similar to Bookshop in Cloudcannon. &#x27;
+ &quot;Didn&#x27;t have much experience with React though. Ideally, it should be a &quot;
+ &#x27;static site generation in the end or something similar.&#x27;,
+ &#x27;Learning how to use python in general👍&#x27;,
+ &#x27;I am working on a module to perform the unfolding statistical technique &#x27;
+ &#x27;using quantum machine learning.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;Girhub: https://github.com/JustWhit3/QUnfold&#x27;,
+ &#x27;I’m working on (partially) getting out of google photos. Symbology photos is &#x27;
+ &#x27;up and running and can be reached over the internet so my family can  see &#x27;
+ &#x27;it. Photos are backing up from my wife’s and my phones. All good there.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;Now I’ve gotta keep two albums in sync: an album on Google and an equivalent &#x27;
+ &#x27;album on the Synology. Yesterday I learned enough from the Google Photos API &#x27;
+ &#x27;to list the photos in an album and download them. Next up is finding photos &#x27;
+ &#x27;on the Synology or downloading missing ones and adding them to a Synology &#x27;
+ &#x27;album.&#x27;,
+ &quot;Something I&#x27;ve always found frustrating when working on data science/machine &quot;
+ &#x27;learning projects is that watching long-running scripts/notebooks is a real &#x27;
+ &#x27;pain. Watching them makes it hard to do anything else at the same time, but &#x27;
+ &#x27;not watching them always seems to ensure that they run into an error and &#x27;
+ &#x27;fail, which means you lose iteration time.\n&#x27;
+ &#x27;\n&#x27;
+ &quot;I&#x27;ve been working for a little while on a simple little tool that will &quot;
+ &#x27;monitor long-running scripts and notebooks, and send you a notification when &#x27;
+ &quot;they finish running. It&#x27;s called LMK, and it&#x27;s actually made my life a lot &quot;
+ &#x27;easier.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;If anyone else is interested in trying it out, you can check out the docs &#x27;
+ &#x27;[here](https://docs.lmkapp.dev)&#x27;,
+ &#x27;Database client with Textual&#x27;,
+ &#x27;Working on a game. Its basically Russian roulette with viruses. You have a &#x27;
+ &#x27;1/6 Chance of your PC not getting a virus. So I have to code 5 different &#x27;
+ &#x27;viruses:\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;1. Delete System32\n&#x27;
+ &#x27;2. Duplicate files\n&#x27;
+ &#x27;3. Opens infinite command prompt windows\n&#x27;
+ &#x27;\n&#x27;
+ &quot;I&#x27;m still deciding what last 2 viruses should be. Help me out by giving me &quot;
+ &#x27;some ideas.&#x27;,
+ &#x27;Have some burning questions on advanced Python topics? Use this thread to &#x27;
+ &#x27;ask more advanced questions related to Python.\n&#x27;
+ &#x27;\n&#x27;
+ &#x27;**If your question is a beginner question we hold a beginner Daily Thread &#x27;
+ &#x27;tomorrow (Wednesday) where you can ask any question! We may remove questions &#x27;
+ &#x27;here and ask you to resubmit tomorrow.**\n&#x27;
+ &#x27;\n&#x27;
+ &quot;This thread may be fairly low volume in replies, if you don&#x27;t receive a &quot;
+ &#x27;response we recommend looking at r/LearnPython or joining the Python Discord &#x27;
+ &#x27;server at [https://discord.gg/python](https://discord.gg/python) where you &#x27;
+ &#x27;stand a better chance of receiving a response.&#x27;,
+ &#x27;&#x27;,
+ &quot;registation wall, can&#x27;t read the article&quot;,
+ &#x27;here you go https://archive.ph/6jkDk&#x27;,
+ &quot;It&#x27;s been four months and 82 new features and enhancements since we last &quot;
+ &quot;updated you on [NiceGUI](ht… &lt;trimmed 126168 bytes string&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>all_threads</td>
+									<td class="code">
+										<pre>[{&#x27;all_awardings&#x27;: [],
+  &#x27;allow_live_comments&#x27;: False,
+  &#x27;approved_at_utc&#x27;: None,
+  &#x27;approved_by&#x27;: None,
+  &#x27;archived&#x27;: False,
+  &#x27;author&#x27;: &#x27;Im__Joseph&#x27;,
+  &#x27;author_flair_background_color&#x27;: &#x27;#7289da&#x27;,
+  &#x27;author_flair_css_class&#x27;: None,
+  &#x27;author_flair_richtext&#x27;: [{&#x27;a&#x27;: &#x27;:python_discord:&#x27;,
+                             &#x27;e&#x27;: &#x27;emoji&#x27;,
+                             &#x27;u&#x27;: &#x27;https://emoji.redditmedia.com/x0lrxnhaazg51_t5_2qh0y/python_discord&#x27;},
+                            {&#x27;e&#x27;: &#x27;text&#x27;, &#x27;t&#x27;: &#x27; Python Discord Staff&#x27;}],
+  &#x27;author_flair_template_id&#x27;: &#x27;294da566-de3a-11ea-b735-0e5977e6a00f&#x27;,
+  &#x27;author_flair_text&#x27;: &#x27;:python_discord: Python Discord Staff&#x27;,
+  &#x27;author_flair_text_color&#x27;: &#x27;light&#x27;,
+  &#x27;author_flair_type&#x27;: &#x27;richtext&#x27;,
+  &#x27;author_fullname&#x27;: &#x27;t2_145f96&#x27;,
+  &#x27;author_is_blocked&#x27;: False,
+  &#x27;author_patreon_flair&#x27;: False,
+  &#x27;author_premium&#x27;: False,
+  &#x27;awarders&#x27;: [],
+  &#x27;banned_at_utc&#x27;: None,
+  &#x27;banned_by&#x27;: None,
+  &#x27;can_gild&#x27;: False,
+  &#x27;can_mod_post&#x27;: False,
+  &#x27;category&#x27;: None,
+  &#x27;clicked&#x27;: False,
+  &#x27;content_categories&#x27;: None,
+  &#x27;contest_mode&#x27;: False,
+  &#x27;created&#x27;: 1695513612.0,
+  &#x27;created_utc&#x27;: 1695513612.0,
+  &#x27;discussion_type&#x27;: None,
+  &#x27;distinguished&#x27;: &#x27;moderator&#x27;,
+  &#x27;domain&#x27;: &#x27;self.Python&#x27;,
+  &#x27;downs&#x27;: 0,
+  &#x27;edited&#x27;: False,
+  &#x27;gilded&#x27;: 0,
+  &#x27;gildings&#x27;: {},
+  &#x27;hidden&#x27;: False,
+  &#x27;hide_score&#x27;: False,
+  &#x27;id&#x27;: &#x27;16qj72u&#x27;,
+  &#x27;is_created_from_ads_ui&#x27;: False,
+  &#x27;is_crosspostable&#x27;: False,
+  &#x27;is_meta&#x27;: False,
+  &#x27;is_original_content&#x27;: False,
+  &#x27;is_reddit_media_domain&#x27;: False,
+  &#x27;is_robot_indexable&#x27;: True,
+  &#x27;is_self&#x27;: True,
+  &#x27;is_video&#x27;: False,
+  &#x27;likes&#x27;: None,
+  &#x27;link_flair_background_color&#x27;: &#x27;#00a6a5&#x27;,
+  &#x27;link_flair_css_class&#x27;: &#x27;daily-thread&#x27;,
+  &#x27;link_flair_richtext&#x27;: [{&#x27;e&#x27;: &#x27;text&#x27;, &#x27;t&#x27;: &#x27;Daily Thread&#x27;}],
+  &#x27;link_flair_template_id&#x27;: &#x27;6c024934-de3f-11ea-a05a-0ea86b2be9a1&#x27;,
+  &#x27;link_flair_text&#x27;: &#x27;Daily Thread&#x27;,
+  &#x27;link_flair_text_color&#x27;: &#x27;light&#x27;,
+  &#x27;link_flair_type&#x27;: &#x27;richtext&#x27;,
+  &#x27;locked&#x27;: False,
+  &#x27;media&#x27;: None,
+  &#x27;media_embed&#x27;: {},
+  &#x27;media_only&#x27;: False,
+  &#x27;mod_note&#x27;: None,
+  &#x27;mod_reason_by&#x27;: None,
+  &#x27;mod_reason_title&#x27;: None,
+  &#x27;mod_reports&#x27;: [],
+  &#x27;name&#x27;: &#x27;t3_16qj72u&#x27;,
+  &#x27;no_follow&#x27;: False,
+  &#x27;num_comments&#x27;: 9,
+  &#x27;num_crossposts&#x27;: 0,
+  &#x27;num_reports&#x27;: None,
+  &#x27;over_18&#x27;: False,
+  &#x27;parent_whitelist_status&#x27;: &#x27;all_ads&#x27;,
+  &#x27;permalink&#x27;: &#x27;/r/Python/comments/16qj72u/sunday_daily_thread_whats_everyone_working_on/&#x27;,
+  &#x27;pinned&#x27;: False,
+  &#x27;pwls&#x27;: 6,
+  &#x27;quarantine&#x27;: False,
+  &#x27;removal_reason&#x27;: None,
+  &#x27;removed_by&#x27;: None,
+  &#x27;removed_by_category&#x27;: None,
+  &#x27;report_reasons&#x27;: None,
+  &#x27;saved&#x27;: False,
+  &#x27;score&#x27;: 5,
+  &#x27;secure_media&#x27;: None,
+  &#x27;secure_media_embed&#x27;: {},
+  &#x27;selftext&#x27;: &quot;Tell /r/python what you&#x27;re working on this week! You can be &quot;
+              &#x27;bragging, grousing, sharing your passion, or explaining your &#x27;
+              &#x27;pain. Talk about your current project or your pet project; &#x27;
+              &#x27;whatever you want to share.&#x27;,
+  &#x27;selftext_html&#x27;: &#x27;&amp;lt;!-- SC_OFF --&amp;gt;&amp;lt;div class=&quot;md&quot;&amp;gt;&amp;lt;p&amp;gt;Tell &#x27;
+                   &#x27;&amp;lt;a href=&quot;/r/python&quot;&amp;gt;/r/python&amp;lt;/a&amp;gt; what &#x27;
+                   &#x27;you&amp;amp;#39;re working on this week! You can be bragging, &#x27;
+                   &#x27;grousing, sharing your passion, or explaining your pain. &#x27;
+                   &#x27;Talk about your current project or your pet project; &#x27;
+                   &#x27;whatever you want to share.&amp;lt;/p&amp;gt;\n&#x27;
+                   &#x27;&amp;lt;/div&amp;gt;&amp;lt;!-- SC_ON --&amp;gt;&#x27;,
+  &#x27;send_replies&#x27;: False,
+  &#x27;spoiler&#x27;: False,
+  &#x27;stickied&#x27;: True,
+  &#x27;subreddit&#x27;: &#x27;Python&#x27;,
+  &#x27;subreddit_id&#x27;: &#x27;t5_2qh0y&#x27;,
+  &#x27;subreddit_name_prefixed&#x27;: &#x27;r/Python&#x27;,
+  &#x27;subreddit_subscribers&#x27;: 1152923,
+  &#x27;subreddit_type&#x27;: &#x27;public&#x27;,
+  &#x27;suggested_sort&#x27;: None,
+  &#x27;thumbnail&#x27;: &#x27;self&#x27;,
+  &#x27;thumbnail_height&#x27;: None,
+  &#x27;thumbnail_width&#x27;: None,
+  &#x27;title&#x27;: &quot;Sunday Daily Thread: What&#x27;s everyone working on this week?&quot;,
+  &#x27;top_awarded_type&#x27;: None,
+  &#x27;total_awards_received&#x27;: 0,
+  &#x27;treatment_tags&#x27;: [],
+  &#x27;ups&#x27;: 5,
+  &#x27;upvote_ratio&#x27;: 0.86,
+  &#x27;url&#x27;: &#x27;https://www.reddit.com/r/Python/comments/16qj72u/sunday_daily_thread_whats_everyone_working_on/&#x27;,
+  &#x27;user_reports&#x27;: [],
+  &#x27;view_count&#x27;: None,
+  &#x27;visited&#x27;: False,
+  &#x27;whitelist_status&#x27;: &#x27;all_ads&#x27;,
+  &#x27;wls&#x27;: 6},
+ {&#x27;all_awardings&#x27;:… &lt;trimmed 189364 bytes string&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>all_threads_comments</td>
+									<td class="code">
+										<pre>[{&#x27;comments&#x27;: [&#x27;Got through a lot of git-based and some headless CMS &#x27;
+               &#x27;solutions, trying to see if there is an option to have &#x27;
+               &#x27;high-level site editing for the &quot;marketing&quot; department and &#x27;
+               &#x27;good project control for IT, like keeping one current layout &#x27;
+               &#x27;always in sync for all pages. Will be migrating a part of a &#x27;
+               &#x27;Django project to that, likely cloudcannon editor and 11ty... &#x27;
+               &#x27;assuming the editor will work as intended.\n&#x27;
+               &#x27;\n&#x27;
+               &#x27;Got some custom displays from Aliexpress as well - one &#x27;
+               &#x27;smartwatch like with Pi Pico and the other HDMI but as a wide &#x27;
+               &#x27;strip for like PC status bar. Will be using Python to design &#x27;
+               &#x27;some showcase UI for them (watch stuff and then status charts &#x27;
+               &#x27;and widgets).&#x27;,
+               &#x27;Have a look at React Bricks, too. You have true inline visual &#x27;
+               &#x27;editing for the marketing team, but you define the content &#x27;
+               &#x27;blocks as React components, so good control for IT and safe &#x27;
+               &#x27;design system.&#x27;,
+               &#x27;Will have to look at it. It seems to be similar to Bookshop in &#x27;
+               &quot;Cloudcannon. Didn&#x27;t have much experience with React though. &quot;
+               &#x27;Ideally, it should be a static site generation in the end or &#x27;
+               &#x27;something similar.&#x27;,
+               &#x27;Learning how to use python in general👍&#x27;,
+               &#x27;I am working on a module to perform the unfolding statistical &#x27;
+               &#x27;technique using quantum machine learning.\n&#x27;
+               &#x27;\n&#x27;
+               &#x27;Girhub: https://github.com/JustWhit3/QUnfold&#x27;,
+               &#x27;I’m working on (partially) getting out of google photos. &#x27;
+               &#x27;Symbology photos is up and running and can be reached over the &#x27;
+               &#x27;internet so my family can  see it. Photos are backing up from &#x27;
+               &#x27;my wife’s and my phones. All good there.\n&#x27;
+               &#x27;\n&#x27;
+               &#x27;Now I’ve gotta keep two albums in sync: an album on Google and &#x27;
+               &#x27;an equivalent album on the Synology. Yesterday I learned &#x27;
+               &#x27;enough from the Google Photos API to list the photos in an &#x27;
+               &#x27;album and download them. Next up is finding photos on the &#x27;
+               &#x27;Synology or downloading missing ones and adding them to a &#x27;
+               &#x27;Synology album.&#x27;,
+               &quot;Something I&#x27;ve always found frustrating when working on data &quot;
+               &#x27;science/machine learning projects is that watching &#x27;
+               &#x27;long-running scripts/notebooks is a real pain. Watching them &#x27;
+               &#x27;makes it hard to do anything else at the same time, but not &#x27;
+               &#x27;watching them always seems to ensure that they run into an &#x27;
+               &#x27;error and fail, which means you lose iteration time.\n&#x27;
+               &#x27;\n&#x27;
+               &quot;I&#x27;ve been working for a little while on a simple little tool &quot;
+               &#x27;that will monitor long-running scripts and notebooks, and send &#x27;
+               &quot;you a notification when they finish running. It&#x27;s called LMK, &quot;
+               &quot;and it&#x27;s actually made my life a lot easier.\n&quot;
+               &#x27;\n&#x27;
+               &#x27;If anyone else is interested in trying it out, you can check &#x27;
+               &#x27;out the docs [here](https://docs.lmkapp.dev)&#x27;,
+               &#x27;Database client with Textual&#x27;,
+               &#x27;Working on a game. Its basically Russian roulette with &#x27;
+               &#x27;viruses. You have a 1/6 Chance of your PC not getting a virus. &#x27;
+               &#x27;So I have to code 5 different viruses:\n&#x27;
+               &#x27;\n&#x27;
+               &#x27;1. Delete System32\n&#x27;
+               &#x27;2. Duplicate files\n&#x27;
+               &#x27;3. Opens infinite command prompt windows\n&#x27;
+               &#x27;\n&#x27;
+               &quot;I&#x27;m still deciding what last 2 viruses should be. Help me out &quot;
+               &#x27;by giving me some ideas.&#x27;],
+  &#x27;post&#x27;: &quot;Tell /r/python what you&#x27;re working on this week! You can be &quot;
+          &#x27;bragging, grousing, sharing your passion, or explaining your pain. &#x27;
+ … &lt;trimmed 166073 bytes string&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>body</td>
+									<td class="code">
+										<pre>{&#x27;hashtag&#x27;: &#x27;node&#x27;}</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>body_unicode</td>
+									<td class="code">
+										<pre>&#x27;{\r\n    &quot;hashtag&quot;: &quot;node&quot;\r\n}&#x27;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>format</td>
+									<td class="code">
+										<pre>None</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>hashtag</td>
+									<td class="code">
+										<pre>&#x27;node&#x27;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>request</td>
+									<td class="code">
+										<pre>&lt;rest_framework.request.Request: POST &#x27;/home/hashtags&#x27;&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>response2</td>
+									<td class="code">
+										<pre>&lt;Response [200]&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>self</td>
+									<td class="code">
+										<pre>&lt;webapp.views.HashTag object at 0x0000023D98D51BD0&gt;</pre>
+									</td>
+								</tr>
+
+								<tr>
+									<td>th</td>
+									<td class="code">
+										<pre>{&#x27;comments&#x27;: [&#x27;TL;DW : \n&#x27;
+              &#x27;`__getitem__` controls the `[]` syntax in python, i.e. item &#x27;
+              &#x27;accessing. Implement it on a class so that the instance can use &#x27;
+              &#x27;the `instance[other]` syntax. To note that other can be &#x27;
+              &#x27;whatever type you want : `str`, `int` or even `tuple`.&#x27;],
+ &#x27;post&#x27;: &#x27;This is my third video on YouTube created by taking your suggestions &#x27;
+         &#x27;and feedback into account. I need you guys to leave suggestions and &#x27;
+         &#x27;point out mistakes in this video, so I can rectify them.\n&#x27;
+         &#x27;\n&#x27;
+         &#x27;**Video Link:** &#x27;
+         &#x27;[https://youtu.be/tkZSjGMSFf8?si=gBaKj0MONrbI\\_BcO](https://youtu.be/tkZSjGMSFf8?si=gBaKj0MONrbI_BcO)&#x27;}</pre>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</details>
+
+				</li>
+
+			</ul>
+		</div>
+
+		<form action="https://dpaste.com/" name="pasteform" id="pasteform" method="post">
+			<div id="pastebinTraceback" class="pastebin">
+				<input type="hidden" name="language" value="PythonConsole">
+				<input type="hidden" name="title"
+      value="UnboundLocalError at /home/hashtags">
+				<input type="hidden" name="source" value="Django Dpaste Agent">
+				<input type="hidden" name="poster" value="Django">
+				<textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+
+
+Request Method: POST
+Request URL: http://127.0.0.1:8000/home/hashtags
+
+Django Version: 4.2.4
+Python Version: 3.11.4
+Installed Applications:
+[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;rest_framework&#x27;,
+ &#x27;webapp&#x27;]
+Installed Middleware:
+[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]
+
+
+
+Traceback (most recent call last):
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+    ^^^^^^^^^
+  File "C:\Users\gkari\anaconda3\envs\TwitterAnalysis\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gkari\twitter_analysis_project\twitter_analysis\webapp\views.py", line 129, in post
+    tk = [word for word in tk if word not in set(stopwords.words(&#x27;english&#x27;)) and word not in r&quot;.$/(){}!;&#x27;,#$%^&amp;*[]|\&lt;&gt;?+=*-_`\&quot;:;~&quot;]
+                           ^^
+
+Exception Type: UnboundLocalError at /home/hashtags
+Exception Value: cannot access local variable &#x27;tk&#x27; where it is not associated with a value
+</textarea>
+				<br><br>
+				<input type="submit" value="Share this traceback on a public website">
+  </div>
+		</form>
+
+	</div>
+
+
+	<div id="requestinfo">
+		<h2>Request information</h2>
+
+
+
+		<h3 id="user-info">USER</h3>
+		<p>AnonymousUser</p>
+
+
+		<h3 id="get-info">GET</h3>
+
+		<p>No GET data</p>
+
+
+		<h3 id="post-info">POST</h3>
+
+		<p>No POST data</p>
+
+
+		<h3 id="files-info">FILES</h3>
+
+		<p>No FILES data</p>
+
+
+		<h3 id="cookie-info">COOKIES</h3>
+
+		<p>No cookie data</p>
+
+
+		<h3 id="meta-info">META</h3>
+		<table class="req">
+			<thead>
+				<tr>
+					<th>Variable</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>ADSK_CLM_WPAD_PROXY_CHECK</td>
+					<td class="code">
+						<pre>&#x27;FALSE&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ALLUSERSPROFILE</td>
+					<td class="code">
+						<pre>&#x27;C:\\ProgramData&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>APPDATA</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\AppData\\Roaming&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CHROME_CRASHPAD_PIPE_NAME</td>
+					<td class="code">
+						<pre>&#x27;\\\\.\\pipe\\LOCAL\\crashpad_25024_LULXIULFHBVTDZYV&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COLORTERM</td>
+					<td class="code">
+						<pre>&#x27;truecolor&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COMMONPROGRAMFILES</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\Common Files&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COMMONPROGRAMFILES(X86)</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files (x86)\\Common Files&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COMMONPROGRAMW6432</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\Common Files&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COMPUTERNAME</td>
+					<td class="code">
+						<pre>&#x27;ASUS-PC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>COMSPEC</td>
+					<td class="code">
+						<pre>&#x27;C:\\WINDOWS\\system32\\cmd.exe&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_BAT</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\anaconda3\\condabin\\conda.bat&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_DEFAULT_ENV</td>
+					<td class="code">
+						<pre>&#x27;TwitterAnalysis&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_EXE</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\anaconda3\\Scripts\\conda.exe&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_PREFIX</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_PREFIX_1</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\anaconda3&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_PROMPT_MODIFIER</td>
+					<td class="code">
+						<pre>&#x27;(TwitterAnalysis) &#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_PYTHON_EXE</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\anaconda3\\python.exe&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONDA_SHLVL</td>
+					<td class="code">
+						<pre>&#x27;2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONTENT_LENGTH</td>
+					<td class="code">
+						<pre>&#x27;27&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CONTENT_TYPE</td>
+					<td class="code">
+						<pre>&#x27;application/json&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CUDA_PATH</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v10.2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CUDA_PATH_V10_0</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v10.0&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CUDA_PATH_V10_2</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v10.2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DJANGO_SETTINGS_MODULE</td>
+					<td class="code">
+						<pre>&#x27;twitter_analysis.settings&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DRIVERDATA</td>
+					<td class="code">
+						<pre>&#x27;C:\\Windows\\System32\\Drivers\\DriverData&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FIFA</td>
+					<td class="code">
+						<pre>&#x27;D:\\Games\\FIFA19\\FIFA19&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FPS_BROWSER_APP_PROFILE_STRING</td>
+					<td class="code">
+						<pre>&#x27;Internet Explorer&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FPS_BROWSER_USER_PROFILE_STRING</td>
+					<td class="code">
+						<pre>&#x27;Default&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>GATEWAY_INTERFACE</td>
+					<td class="code">
+						<pre>&#x27;CGI/1.1&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>GIT_ASKPASS</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>GNUPLOT_LIB</td>
+					<td class="code">
+						<pre>(&#x27;C:\\Program Files\\gnuplot\\demo;C:\\Program &#x27;
+ &#x27;Files\\gnuplot\\demo\\games;C:\\Program Files\\gnuplot\\share&#x27;)</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>GNUTERM</td>
+					<td class="code">
+						<pre>&#x27;windows&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HOMEDRIVE</td>
+					<td class="code">
+						<pre>&#x27;C:&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HOMEPATH</td>
+					<td class="code">
+						<pre>&#x27;\\Users\\gkari&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_ACCEPT</td>
+					<td class="code">
+						<pre>&#x27;*/*&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_ACCEPT_ENCODING</td>
+					<td class="code">
+						<pre>&#x27;gzip, deflate, br&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_CONNECTION</td>
+					<td class="code">
+						<pre>&#x27;keep-alive&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_HOST</td>
+					<td class="code">
+						<pre>&#x27;127.0.0.1:8000&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_POSTMAN_TOKEN</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>HTTP_USER_AGENT</td>
+					<td class="code">
+						<pre>&#x27;PostmanRuntime/7.32.3&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>JAVA_HOME</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\Java\\jdk-13.0.1&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANG</td>
+					<td class="code">
+						<pre>&#x27;en_US.UTF-8&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOCALAPPDATA</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\AppData\\Local&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGONSERVER</td>
+					<td class="code">
+						<pre>&#x27;\\\\ASUS-PC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MSMPI_BIN</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\Microsoft MPI\\Bin\\&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NUMBER_OF_PROCESSORS</td>
+					<td class="code">
+						<pre>&#x27;16&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NVCUDASAMPLES10_0_ROOT</td>
+					<td class="code">
+						<pre>&#x27;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v10.0&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NVCUDASAMPLES10_2_ROOT</td>
+					<td class="code">
+						<pre>&#x27;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v10.2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NVCUDASAMPLES_ROOT</td>
+					<td class="code">
+						<pre>&#x27;C:\\ProgramData\\NVIDIA Corporation\\CUDA Samples\\v10.2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NVTOOLSEXT_PATH</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files\\NVIDIA Corporation\\NvToolsExt\\&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ONEDRIVE</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\OneDrive&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ONEDRIVECONSUMER</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\OneDrive&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ORIGINAL_XDG_CURRENT_DESKTOP</td>
+					<td class="code">
+						<pre>&#x27;undefined&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>OS</td>
+					<td class="code">
+						<pre>&#x27;Windows_NT&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PATH</td>
+					<td class="code">
+						<pre>(&#x27;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Library\\mingw-w64\\bin;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Library\\usr\\bin;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Library\\bin;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\Scripts;C:\\Users\\gkari\\anaconda3\\envs\\TwitterAnalysis\\bin;C:\\Users\\gkari\\anaconda3\\condabin;C:\\Program &#x27;
+ &#x27;Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Eclipse &#x27;
+ &#x27;Adoptium\\jdk-17.0.6.10-hotspot\\bin;C:\\Program Files (x86)\\Common &#x27;
+ &#x27;Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing &#x27;
+ &#x27;Toolkit\\CUDA\\v10.2\\bin;C:\\Program Files\\NVIDIA GPU Computing &#x27;
+ &#x27;Toolkit\\CUDA\\v10.2\\libnvvp;C:\\Program Files\\NVIDIA GPU Computing &#x27;
+ &#x27;Toolkit\\CUDA\\v10.0\\bin;C:\\Program Files\\NVIDIA GPU Computing &#x27;
+ &#x27;Toolkit\\CUDA\\v10.0\\libnvvp;C:\\Program Files\\Microsoft &#x27;
+ &#x27;MPI\\Bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program &#x27;
+ &#x27;Files\\Broadcom\\Broadcom 802.11 Network &#x27;
+ &#x27;Adapter;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program &#x27;
+ &#x27;Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program &#x27;
+ &#x27;Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn;C:\\Program &#x27;
+ &#x27;Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn;C:\\Program &#x27;
+ &#x27;Files\\Microsoft SQL Server\\140\\Tools\\Binn;C:\\Program Files\\Microsoft &#x27;
+ &#x27;SQL Server\\140\\DTS\\Binn;C:\\Program Files (x86)\\Microsoft SQL &#x27;
+ &#x27;Server\\Client SDK\\ODBC\\130\\Tools\\Binn;C:\\Program Files &#x27;
+ &#x27;(x86)\\Microsoft SQL Server\\140\\DTS\\Binn;C:\\Program Files &#x27;
+ &#x27;(x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\ManagementStudio;C:\\Program &#x27;
+ &#x27;Files\\dotnet;C:\\Program Files\\Microsoft SQL &#x27;
+ &#x27;Server\\130\\Tools\\Binn;C:\\Program Files\\NVIDIA Corporation\\NVIDIA &#x27;
+ &#x27;NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client &#x27;
+ &#x27;SDK\\ODBC\\170\\Tools\\Binn;C:\\Program Files (x86)\\NVIDIA &#x27;
+ &#x27;Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program &#x27;
+ &#x27;Files\\NVIDIA Corporation\\Nsight Compute &#x27;
+ &#x27;2019.5.0;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program &#x27;
+ &#x27;Files\\Calibre2;C:\\Program &#x27;
+ &#x27;Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\nodejs;C:\\Program &#x27;
+ &#x27;Files\\Cloudflare\\Cloudflare WARP;C:\\Program Files\\MySQL\\MySQL Shell &#x27;
+ &#x27;8.0\\bin;C:\\Users\\gkari\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program &#x27;
+ &#x27;Files\\Microsoft VS Code\\bin;C:\\MinGW\\bin;C:\\Program &#x27;
+ &#x27;Files\\LLVM\\bin;C:\\Users\\gkari\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\gkari\\AppData\\Local\\Microsoft\\WindowsApps;C:\\iverilog\\bin;C:\\iverilog\\gtkwave\\bin;C:\\Modeltech_pe_edu_10.4a\\win32pe_edu;D:\\games\\FIFA19;D:\\Games\\Sekiro &#x27;
+ &#x27;Shadows die &#x27;
+ &#x27;twice;C:\\intelFPGA\\18.1\\modelsim_ase\\win32aloem;C:\\Users\\gkari\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\gkari\\Downloads\\javacc-5.0\\bin;C:\\Program &#x27;
+ &#x27;Files &#x27;
+ &#x27;(x86)\\Java\\jre1.8.0_231\\bin;C:\\Users\\gkari\\.dotnet\\tools;C:\\Users\\gkari\\AppData\\Roaming\\npm&#x27;)</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PATHEXT</td>
+					<td class="code">
+						<pre>&#x27;.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PATH_INFO</td>
+					<td class="code">
+						<pre>&#x27;/home/hashtags&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROCESSOR_ARCHITECTURE</td>
+					<td class="code">
+						<pre>&#x27;AMD64&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROCESSOR_IDENTIFIER</td>
+					<td class="code">
+						<pre>&#x27;Intel64 Family 6 Model 79 Stepping 1, GenuineIntel&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROCESSOR_LEVEL</td>
+					<td class="code">
+						<pre>&#x27;6&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROCESSOR_REVISION</td>
+					<td class="code">
+						<pre>&#x27;4f01&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROGRAMDATA</td>
+					<td class="code">
+						<pre>&#x27;C:\\ProgramData&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROGRAMFILES</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROGRAMFILES(X86)</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files (x86)&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROGRAMW6432</td>
+					<td class="code">
+						<pre>&#x27;C:\\Program Files&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PROMPT</td>
+					<td class="code">
+						<pre>&#x27;(TwitterAnalysis) $P$G&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PSMODULEPATH</td>
+					<td class="code">
+						<pre>(&#x27;C:\\Program &#x27;
+ &#x27;Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program &#x27;
+ &#x27;Files\\Intel\\Wired Networking\\;C:\\Program Files (x86)\\Microsoft SQL &#x27;
+ &#x27;Server\\140\\Tools\\PowerShell\\Modules\\&#x27;)</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PUBLIC</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\Public&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PYTHON3</td>
+					<td class="code">
+						<pre>(&#x27;C:\\Program Files (x86)\\Microsoft Visual &#x27;
+ &#x27;Studio\\Shared\\Python37_86\\python.exe&#x27;)</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>QTMSBUILD</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\AppData\\Local\\QtMsBuild&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>QUARTUS_ROOTDIR</td>
+					<td class="code">
+						<pre>&#x27;c:\\altera\\12.0\\quartus&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>QUERY_STRING</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>REMOTE_ADDR</td>
+					<td class="code">
+						<pre>&#x27;127.0.0.1&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>REMOTE_HOST</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>REQUEST_METHOD</td>
+					<td class="code">
+						<pre>&#x27;POST&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>RUN_MAIN</td>
+					<td class="code">
+						<pre>&#x27;true&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SCRIPT_NAME</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SERVER_NAME</td>
+					<td class="code">
+						<pre>&#x27;kubernetes.docker.internal&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SERVER_PORT</td>
+					<td class="code">
+						<pre>&#x27;8000&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SERVER_PROTOCOL</td>
+					<td class="code">
+						<pre>&#x27;HTTP/1.1&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SERVER_SOFTWARE</td>
+					<td class="code">
+						<pre>&#x27;WSGIServer/0.2&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSIONNAME</td>
+					<td class="code">
+						<pre>&#x27;Console&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SOPC_KIT_NIOS2</td>
+					<td class="code">
+						<pre>&#x27;c:\\altera\\12.0\\nios2eds&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SYSTEMDRIVE</td>
+					<td class="code">
+						<pre>&#x27;C:&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SYSTEMROOT</td>
+					<td class="code">
+						<pre>&#x27;C:\\WINDOWS&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TEMP</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\AppData\\Local\\Temp&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TERM_PROGRAM</td>
+					<td class="code">
+						<pre>&#x27;vscode&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TERM_PROGRAM_VERSION</td>
+					<td class="code">
+						<pre>&#x27;1.75.0&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TMP</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari\\AppData\\Local\\Temp&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USERDOMAIN</td>
+					<td class="code">
+						<pre>&#x27;ASUS-PC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USERDOMAIN_ROAMINGPROFILE</td>
+					<td class="code">
+						<pre>&#x27;ASUS-PC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USERNAME</td>
+					<td class="code">
+						<pre>&#x27;gkari&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USERPROFILE</td>
+					<td class="code">
+						<pre>&#x27;C:\\Users\\gkari&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>VSCODE_GIT_ASKPASS_EXTRA_ARGS</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>VSCODE_GIT_ASKPASS_MAIN</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>VSCODE_GIT_ASKPASS_NODE</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>VSCODE_GIT_IPC_HANDLE</td>
+					<td class="code">
+						<pre>&#x27;\\\\.\\pipe\\vscode-git-56031e8634-sock&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>WINDIR</td>
+					<td class="code">
+						<pre>&#x27;C:\\WINDOWS&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.errors</td>
+					<td class="code">
+						<pre>&lt;_io.TextIOWrapper name=&#x27;&lt;stderr&gt;&#x27; mode=&#x27;w&#x27; encoding=&#x27;utf-8&#x27;&gt;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.file_wrapper</td>
+					<td class="code">
+						<pre>&lt;class &#x27;wsgiref.util.FileWrapper&#x27;&gt;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.input</td>
+					<td class="code">
+						<pre>&lt;django.core.handlers.wsgi.LimitedStream object at 0x0000023D98ABBA00&gt;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.multiprocess</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.multithread</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.run_once</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.url_scheme</td>
+					<td class="code">
+						<pre>&#x27;http&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>wsgi.version</td>
+					<td class="code">
+						<pre>(1, 0)</pre>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+		<h3 id="settings-info">Settings</h3>
+		<h4>Using settings module <code>twitter_analysis.settings</code></h4>
+		<table class="req">
+			<thead>
+				<tr>
+					<th>Setting</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>ABSOLUTE_URL_OVERRIDES</td>
+					<td class="code">
+						<pre>{}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ADMINS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ALLOWED_HOSTS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>APPEND_SLASH</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>AUTHENTICATION_BACKENDS</td>
+					<td class="code">
+						<pre>[&#x27;django.contrib.auth.backends.ModelBackend&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>AUTH_PASSWORD_VALIDATORS</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>AUTH_USER_MODEL</td>
+					<td class="code">
+						<pre>&#x27;auth.User&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>BASE_DIR</td>
+					<td class="code">
+						<pre>WindowsPath(&#x27;C:/Users/gkari/twitter_analysis_project/twitter_analysis&#x27;)</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CACHES</td>
+					<td class="code">
+						<pre>{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.cache.backends.locmem.LocMemCache&#x27;}}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CACHE_MIDDLEWARE_ALIAS</td>
+					<td class="code">
+						<pre>&#x27;default&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CACHE_MIDDLEWARE_SECONDS</td>
+					<td class="code">
+						<pre>600</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_AGE</td>
+					<td class="code">
+						<pre>31449600</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_DOMAIN</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_HTTPONLY</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_MASKED</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_NAME</td>
+					<td class="code">
+						<pre>&#x27;csrftoken&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_PATH</td>
+					<td class="code">
+						<pre>&#x27;/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_SAMESITE</td>
+					<td class="code">
+						<pre>&#x27;Lax&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_COOKIE_SECURE</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_FAILURE_VIEW</td>
+					<td class="code">
+						<pre>&#x27;django.views.csrf.csrf_failure&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_HEADER_NAME</td>
+					<td class="code">
+						<pre>&#x27;HTTP_X_CSRFTOKEN&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_TRUSTED_ORIGINS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>CSRF_USE_SESSIONS</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATABASES</td>
+					<td class="code">
+						<pre>{&#x27;default&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+             &#x27;AUTOCOMMIT&#x27;: True,
+             &#x27;CONN_HEALTH_CHECKS&#x27;: False,
+             &#x27;CONN_MAX_AGE&#x27;: 0,
+             &#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,
+             &#x27;HOST&#x27;: &#x27;localhost&#x27;,
+             &#x27;NAME&#x27;: &#x27;twitter_analysis&#x27;,
+             &#x27;OPTIONS&#x27;: {},
+             &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+             &#x27;PORT&#x27;: &#x27;3306&#x27;,
+             &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                      &#x27;COLLATION&#x27;: None,
+                      &#x27;MIGRATE&#x27;: True,
+                      &#x27;MIRROR&#x27;: None,
+                      &#x27;NAME&#x27;: None},
+             &#x27;TIME_ZONE&#x27;: None,
+             &#x27;USER&#x27;: &#x27;root&#x27;}}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATABASE_ROUTERS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+					<td class="code">
+						<pre>2621440</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+					<td class="code">
+						<pre>1000</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATA_UPLOAD_MAX_NUMBER_FILES</td>
+					<td class="code">
+						<pre>100</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATETIME_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;N j, Y, P&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATETIME_INPUT_FORMATS</td>
+					<td class="code">
+						<pre>[&#x27;%Y-%m-%d %H:%M:%S&#x27;,
+ &#x27;%Y-%m-%d %H:%M:%S.%f&#x27;,
+ &#x27;%Y-%m-%d %H:%M&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%Y %H:%M&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%y %H:%M&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATE_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;N j, Y&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DATE_INPUT_FORMATS</td>
+					<td class="code">
+						<pre>[&#x27;%Y-%m-%d&#x27;,
+ &#x27;%m/%d/%Y&#x27;,
+ &#x27;%m/%d/%y&#x27;,
+ &#x27;%b %d %Y&#x27;,
+ &#x27;%b %d, %Y&#x27;,
+ &#x27;%d %b %Y&#x27;,
+ &#x27;%d %b, %Y&#x27;,
+ &#x27;%B %d %Y&#x27;,
+ &#x27;%B %d, %Y&#x27;,
+ &#x27;%d %B %Y&#x27;,
+ &#x27;%d %B, %Y&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEBUG</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DECIMAL_SEPARATOR</td>
+					<td class="code">
+						<pre>&#x27;.&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_AUTO_FIELD</td>
+					<td class="code">
+						<pre>&#x27;django.db.models.BigAutoField&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_CHARSET</td>
+					<td class="code">
+						<pre>&#x27;utf-8&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_EXCEPTION_REPORTER</td>
+					<td class="code">
+						<pre>&#x27;django.views.debug.ExceptionReporter&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+					<td class="code">
+						<pre>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_FILE_STORAGE</td>
+					<td class="code">
+						<pre>&#x27;django.core.files.storage.FileSystemStorage&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_FROM_EMAIL</td>
+					<td class="code">
+						<pre>&#x27;webmaster@localhost&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_INDEX_TABLESPACE</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DEFAULT_TABLESPACE</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>DISALLOWED_USER_AGENTS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_BACKEND</td>
+					<td class="code">
+						<pre>&#x27;django.core.mail.backends.smtp.EmailBackend&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_HOST</td>
+					<td class="code">
+						<pre>&#x27;localhost&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_HOST_PASSWORD</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_HOST_USER</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_PORT</td>
+					<td class="code">
+						<pre>25</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_SSL_CERTFILE</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_SSL_KEYFILE</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_SUBJECT_PREFIX</td>
+					<td class="code">
+						<pre>&#x27;[Django] &#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_TIMEOUT</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_USE_LOCALTIME</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_USE_SSL</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMAIL_USE_TLS</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FILE_UPLOAD_HANDLERS</td>
+					<td class="code">
+						<pre>[&#x27;django.core.files.uploadhandler.MemoryFileUploadHandler&#x27;,
+ &#x27;django.core.files.uploadhandler.TemporaryFileUploadHandler&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+					<td class="code">
+						<pre>2621440</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FILE_UPLOAD_PERMISSIONS</td>
+					<td class="code">
+						<pre>420</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FILE_UPLOAD_TEMP_DIR</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FIRST_DAY_OF_WEEK</td>
+					<td class="code">
+						<pre>0</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FIXTURE_DIRS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FORCE_SCRIPT_NAME</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FORMAT_MODULE_PATH</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>FORM_RENDERER</td>
+					<td class="code">
+						<pre>&#x27;django.forms.renderers.DjangoTemplates&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>IGNORABLE_404_URLS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>INSTALLED_APPS</td>
+					<td class="code">
+						<pre>[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;rest_framework&#x27;,
+ &#x27;webapp&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>INTERNAL_IPS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGES</td>
+					<td class="code">
+						<pre>[(&#x27;af&#x27;, &#x27;Afrikaans&#x27;),
+ (&#x27;ar&#x27;, &#x27;Arabic&#x27;),
+ (&#x27;ar-dz&#x27;, &#x27;Algerian Arabic&#x27;),
+ (&#x27;ast&#x27;, &#x27;Asturian&#x27;),
+ (&#x27;az&#x27;, &#x27;Azerbaijani&#x27;),
+ (&#x27;bg&#x27;, &#x27;Bulgarian&#x27;),
+ (&#x27;be&#x27;, &#x27;Belarusian&#x27;),
+ (&#x27;bn&#x27;, &#x27;Bengali&#x27;),
+ (&#x27;br&#x27;, &#x27;Breton&#x27;),
+ (&#x27;bs&#x27;, &#x27;Bosnian&#x27;),
+ (&#x27;ca&#x27;, &#x27;Catalan&#x27;),
+ (&#x27;ckb&#x27;, &#x27;Central Kurdish (Sorani)&#x27;),
+ (&#x27;cs&#x27;, &#x27;Czech&#x27;),
+ (&#x27;cy&#x27;, &#x27;Welsh&#x27;),
+ (&#x27;da&#x27;, &#x27;Danish&#x27;),
+ (&#x27;de&#x27;, &#x27;German&#x27;),
+ (&#x27;dsb&#x27;, &#x27;Lower Sorbian&#x27;),
+ (&#x27;el&#x27;, &#x27;Greek&#x27;),
+ (&#x27;en&#x27;, &#x27;English&#x27;),
+ (&#x27;en-au&#x27;, &#x27;Australian English&#x27;),
+ (&#x27;en-gb&#x27;, &#x27;British English&#x27;),
+ (&#x27;eo&#x27;, &#x27;Esperanto&#x27;),
+ (&#x27;es&#x27;, &#x27;Spanish&#x27;),
+ (&#x27;es-ar&#x27;, &#x27;Argentinian Spanish&#x27;),
+ (&#x27;es-co&#x27;, &#x27;Colombian Spanish&#x27;),
+ (&#x27;es-mx&#x27;, &#x27;Mexican Spanish&#x27;),
+ (&#x27;es-ni&#x27;, &#x27;Nicaraguan Spanish&#x27;),
+ (&#x27;es-ve&#x27;, &#x27;Venezuelan Spanish&#x27;),
+ (&#x27;et&#x27;, &#x27;Estonian&#x27;),
+ (&#x27;eu&#x27;, &#x27;Basque&#x27;),
+ (&#x27;fa&#x27;, &#x27;Persian&#x27;),
+ (&#x27;fi&#x27;, &#x27;Finnish&#x27;),
+ (&#x27;fr&#x27;, &#x27;French&#x27;),
+ (&#x27;fy&#x27;, &#x27;Frisian&#x27;),
+ (&#x27;ga&#x27;, &#x27;Irish&#x27;),
+ (&#x27;gd&#x27;, &#x27;Scottish Gaelic&#x27;),
+ (&#x27;gl&#x27;, &#x27;Galician&#x27;),
+ (&#x27;he&#x27;, &#x27;Hebrew&#x27;),
+ (&#x27;hi&#x27;, &#x27;Hindi&#x27;),
+ (&#x27;hr&#x27;, &#x27;Croatian&#x27;),
+ (&#x27;hsb&#x27;, &#x27;Upper Sorbian&#x27;),
+ (&#x27;hu&#x27;, &#x27;Hungarian&#x27;),
+ (&#x27;hy&#x27;, &#x27;Armenian&#x27;),
+ (&#x27;ia&#x27;, &#x27;Interlingua&#x27;),
+ (&#x27;id&#x27;, &#x27;Indonesian&#x27;),
+ (&#x27;ig&#x27;, &#x27;Igbo&#x27;),
+ (&#x27;io&#x27;, &#x27;Ido&#x27;),
+ (&#x27;is&#x27;, &#x27;Icelandic&#x27;),
+ (&#x27;it&#x27;, &#x27;Italian&#x27;),
+ (&#x27;ja&#x27;, &#x27;Japanese&#x27;),
+ (&#x27;ka&#x27;, &#x27;Georgian&#x27;),
+ (&#x27;kab&#x27;, &#x27;Kabyle&#x27;),
+ (&#x27;kk&#x27;, &#x27;Kazakh&#x27;),
+ (&#x27;km&#x27;, &#x27;Khmer&#x27;),
+ (&#x27;kn&#x27;, &#x27;Kannada&#x27;),
+ (&#x27;ko&#x27;, &#x27;Korean&#x27;),
+ (&#x27;ky&#x27;, &#x27;Kyrgyz&#x27;),
+ (&#x27;lb&#x27;, &#x27;Luxembourgish&#x27;),
+ (&#x27;lt&#x27;, &#x27;Lithuanian&#x27;),
+ (&#x27;lv&#x27;, &#x27;Latvian&#x27;),
+ (&#x27;mk&#x27;, &#x27;Macedonian&#x27;),
+ (&#x27;ml&#x27;, &#x27;Malayalam&#x27;),
+ (&#x27;mn&#x27;, &#x27;Mongolian&#x27;),
+ (&#x27;mr&#x27;, &#x27;Marathi&#x27;),
+ (&#x27;ms&#x27;, &#x27;Malay&#x27;),
+ (&#x27;my&#x27;, &#x27;Burmese&#x27;),
+ (&#x27;nb&#x27;, &#x27;Norwegian Bokmål&#x27;),
+ (&#x27;ne&#x27;, &#x27;Nepali&#x27;),
+ (&#x27;nl&#x27;, &#x27;Dutch&#x27;),
+ (&#x27;nn&#x27;, &#x27;Norwegian Nynorsk&#x27;),
+ (&#x27;os&#x27;, &#x27;Ossetic&#x27;),
+ (&#x27;pa&#x27;, &#x27;Punjabi&#x27;),
+ (&#x27;pl&#x27;, &#x27;Polish&#x27;),
+ (&#x27;pt&#x27;, &#x27;Portuguese&#x27;),
+ (&#x27;pt-br&#x27;, &#x27;Brazilian Portuguese&#x27;),
+ (&#x27;ro&#x27;, &#x27;Romanian&#x27;),
+ (&#x27;ru&#x27;, &#x27;Russian&#x27;),
+ (&#x27;sk&#x27;, &#x27;Slovak&#x27;),
+ (&#x27;sl&#x27;, &#x27;Slovenian&#x27;),
+ (&#x27;sq&#x27;, &#x27;Albanian&#x27;),
+ (&#x27;sr&#x27;, &#x27;Serbian&#x27;),
+ (&#x27;sr-latn&#x27;, &#x27;Serbian Latin&#x27;),
+ (&#x27;sv&#x27;, &#x27;Swedish&#x27;),
+ (&#x27;sw&#x27;, &#x27;Swahili&#x27;),
+ (&#x27;ta&#x27;, &#x27;Tamil&#x27;),
+ (&#x27;te&#x27;, &#x27;Telugu&#x27;),
+ (&#x27;tg&#x27;, &#x27;Tajik&#x27;),
+ (&#x27;th&#x27;, &#x27;Thai&#x27;),
+ (&#x27;tk&#x27;, &#x27;Turkmen&#x27;),
+ (&#x27;tr&#x27;, &#x27;Turkish&#x27;),
+ (&#x27;tt&#x27;, &#x27;Tatar&#x27;),
+ (&#x27;udm&#x27;, &#x27;Udmurt&#x27;),
+ (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;),
+ (&#x27;ur&#x27;, &#x27;Urdu&#x27;),
+ (&#x27;uz&#x27;, &#x27;Uzbek&#x27;),
+ (&#x27;vi&#x27;, &#x27;Vietnamese&#x27;),
+ (&#x27;zh-hans&#x27;, &#x27;Simplified Chinese&#x27;),
+ (&#x27;zh-hant&#x27;, &#x27;Traditional Chinese&#x27;)]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGES_BIDI</td>
+					<td class="code">
+						<pre>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_CODE</td>
+					<td class="code">
+						<pre>&#x27;en-us&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_AGE</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_DOMAIN</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_HTTPONLY</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_NAME</td>
+					<td class="code">
+						<pre>&#x27;django_language&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_PATH</td>
+					<td class="code">
+						<pre>&#x27;/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_SAMESITE</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LANGUAGE_COOKIE_SECURE</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOCALE_PATHS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGGING</td>
+					<td class="code">
+						<pre>{}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGGING_CONFIG</td>
+					<td class="code">
+						<pre>&#x27;logging.config.dictConfig&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGIN_REDIRECT_URL</td>
+					<td class="code">
+						<pre>&#x27;/accounts/profile/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGIN_URL</td>
+					<td class="code">
+						<pre>&#x27;/accounts/login/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>LOGOUT_REDIRECT_URL</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MANAGERS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MEDIA_ROOT</td>
+					<td class="code">
+						<pre>&#x27;&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MEDIA_URL</td>
+					<td class="code">
+						<pre>&#x27;/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MESSAGE_STORAGE</td>
+					<td class="code">
+						<pre>&#x27;django.contrib.messages.storage.fallback.FallbackStorage&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MIDDLEWARE</td>
+					<td class="code">
+						<pre>[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MIGRATION_MODULES</td>
+					<td class="code">
+						<pre>{}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>MONTH_DAY_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;F j&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>NUMBER_GROUPING</td>
+					<td class="code">
+						<pre>0</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PASSWORD_HASHERS</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PASSWORD_RESET_TIMEOUT</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>PREPEND_WWW</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>REST_FRAMEWORK</td>
+					<td class="code">
+						<pre>{&#x27;DEFAULT_PERMISSION_CLASSES&#x27;: [&#x27;rest_framework.permissions.AllowAny&#x27;]}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>ROOT_URLCONF</td>
+					<td class="code">
+						<pre>&#x27;twitter_analysis.urls&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECRET_KEY</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECRET_KEY_FALLBACKS</td>
+					<td class="code">
+						<pre>&#x27;********************&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_CONTENT_TYPE_NOSNIFF</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_CROSS_ORIGIN_OPENER_POLICY</td>
+					<td class="code">
+						<pre>&#x27;same-origin&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_HSTS_INCLUDE_SUBDOMAINS</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_HSTS_PRELOAD</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_HSTS_SECONDS</td>
+					<td class="code">
+						<pre>0</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_PROXY_SSL_HEADER</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_REDIRECT_EXEMPT</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_REFERRER_POLICY</td>
+					<td class="code">
+						<pre>&#x27;same-origin&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_SSL_HOST</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SECURE_SSL_REDIRECT</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SERVER_EMAIL</td>
+					<td class="code">
+						<pre>&#x27;root@localhost&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_CACHE_ALIAS</td>
+					<td class="code">
+						<pre>&#x27;default&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_AGE</td>
+					<td class="code">
+						<pre>1209600</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_DOMAIN</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_HTTPONLY</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_NAME</td>
+					<td class="code">
+						<pre>&#x27;sessionid&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_PATH</td>
+					<td class="code">
+						<pre>&#x27;/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_SAMESITE</td>
+					<td class="code">
+						<pre>&#x27;Lax&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_COOKIE_SECURE</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_ENGINE</td>
+					<td class="code">
+						<pre>&#x27;django.contrib.sessions.backends.db&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_EXPIRE_AT_BROWSER_CLOSE</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_FILE_PATH</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_SAVE_EVERY_REQUEST</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SESSION_SERIALIZER</td>
+					<td class="code">
+						<pre>&#x27;django.contrib.sessions.serializers.JSONSerializer&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SETTINGS_MODULE</td>
+					<td class="code">
+						<pre>&#x27;twitter_analysis.settings&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SHORT_DATETIME_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;m/d/Y P&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SHORT_DATE_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;m/d/Y&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SIGNING_BACKEND</td>
+					<td class="code">
+						<pre>&#x27;django.core.signing.TimestampSigner&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SILENCED_SYSTEM_CHECKS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STATICFILES_DIRS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STATICFILES_FINDERS</td>
+					<td class="code">
+						<pre>[&#x27;django.contrib.staticfiles.finders.FileSystemFinder&#x27;,
+ &#x27;django.contrib.staticfiles.finders.AppDirectoriesFinder&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STATICFILES_STORAGE</td>
+					<td class="code">
+						<pre>&#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STATIC_ROOT</td>
+					<td class="code">
+						<pre>None</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STATIC_URL</td>
+					<td class="code">
+						<pre>&#x27;/static/&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>STORAGES</td>
+					<td class="code">
+						<pre>{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.files.storage.FileSystemStorage&#x27;},
+ &#x27;staticfiles&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;}}</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TEMPLATES</td>
+					<td class="code">
+						<pre>[{&#x27;APP_DIRS&#x27;: True,
+  &#x27;BACKEND&#x27;: &#x27;django.template.backends.django.DjangoTemplates&#x27;,
+  &#x27;DIRS&#x27;: [],
+  &#x27;OPTIONS&#x27;: {&#x27;context_processors&#x27;: [&#x27;django.template.context_processors.debug&#x27;,
+                                     &#x27;django.template.context_processors.request&#x27;,
+                                     &#x27;django.contrib.auth.context_processors.auth&#x27;,
+                                     &#x27;django.contrib.messages.context_processors.messages&#x27;]}}]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TEST_NON_SERIALIZED_APPS</td>
+					<td class="code">
+						<pre>[]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TEST_RUNNER</td>
+					<td class="code">
+						<pre>&#x27;django.test.runner.DiscoverRunner&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>THOUSAND_SEPARATOR</td>
+					<td class="code">
+						<pre>&#x27;,&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TIME_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;P&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TIME_INPUT_FORMATS</td>
+					<td class="code">
+						<pre>[&#x27;%H:%M:%S&#x27;, &#x27;%H:%M:%S.%f&#x27;, &#x27;%H:%M&#x27;]</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>TIME_ZONE</td>
+					<td class="code">
+						<pre>&#x27;UTC&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_DEPRECATED_PYTZ</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_I18N</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_L10N</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_THOUSAND_SEPARATOR</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_TZ</td>
+					<td class="code">
+						<pre>True</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_X_FORWARDED_HOST</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>USE_X_FORWARDED_PORT</td>
+					<td class="code">
+						<pre>False</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>WSGI_APPLICATION</td>
+					<td class="code">
+						<pre>&#x27;twitter_analysis.wsgi.application&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>X_FRAME_OPTIONS</td>
+					<td class="code">
+						<pre>&#x27;DENY&#x27;</pre>
+					</td>
+				</tr>
+
+				<tr>
+					<td>YEAR_MONTH_FORMAT</td>
+					<td class="code">
+						<pre>&#x27;F Y&#x27;</pre>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	</div>
+
+	<div id="explanation">
+		<p>
+			You’re seeing this error because you have <code>DEBUG = True</code> in your
+			Django settings file. Change that to <code>False</code>, and Django will
+			display a standard page generated by the handler for this status code.
+		</p>
+	</div>
+
+</body>
+
+</html>
