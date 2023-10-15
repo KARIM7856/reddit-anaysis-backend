@@ -1,5 +1,5 @@
 """
-WSGI config for twitter_analysis project.
+WSGI config for reddit_analysis project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

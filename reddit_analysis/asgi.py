@@ -1,5 +1,5 @@
 """
-ASGI config for twitter_analysis project.
+ASGI config for reddit_analysis project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

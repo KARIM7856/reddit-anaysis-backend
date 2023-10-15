@@ -10,4 +10,4 @@ dataBase = mysql.connector.connect(
 cursorObject = dataBase.cursor()
 
 
-cursorObject.execute('CREATE DATABASE twitter_analysis')
+cursorObject.execute('CREATE DATABASE reddit_analysis')
