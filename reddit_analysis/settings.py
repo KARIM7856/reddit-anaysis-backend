@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5%ar$)%fr2_ver3n$wa-eo8qe(v&1s32*yqzs9dwmu-q+w%h7p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*.vercel.app', 'reddit-anaysis-backend-6ole-ji4mh6fz4-karim7856s-projects.vercel.app']
+ALLOWED_HOSTS = ['*.vercel.app', 'reddit-anaysis-backend-6ole-ji4mh6fz4-karim7856s-projects.vercel.app', 'reddit-anaysis-backend-6ole-git-main-karim7856s-projects.vercel.app', ]
 
 
 # Application definition
