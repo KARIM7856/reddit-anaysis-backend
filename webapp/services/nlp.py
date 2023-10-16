@@ -1,14 +1,15 @@
 import nltk
+async def download_stopwords():
+    
+    nltk.download('stopwords')
+download_stopwords()
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.tokenize import word_tokenize, RegexpTokenizer  # tokenize words
 from nltk.corpus import stopwords
 from nltk.tokenize import TweetTokenizer
 from nltk.probability import FreqDist
 
-async def download_stopwords():
-    
-    nltk.download('stopwords')
-download_stopwords()
+
 
 
 def get_freq_dist(text_array):
