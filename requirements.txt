@@ -19,3 +19,4 @@ sqlparse==0.4.4
 tqdm==4.66.1
 tzdata==2023.3
 urllib3==2.0.5
+vaderSentiment==3.3.2
