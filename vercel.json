@@ -8,7 +8,6 @@
         {
             "src": "/(.*)",
             "dest": "reddit_analysis/wsgi.py",
-            "maxDuration": 40
         }
      ],
      "functions": {
