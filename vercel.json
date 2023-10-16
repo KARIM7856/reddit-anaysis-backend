@@ -9,11 +9,5 @@
             "src": "/(.*)",
             "dest": "reddit_analysis/wsgi.py"
         }
-     ],
-     "functions": {
-      "reddit_analysis/wsgi.py": {
-        "memory": 1000,
-        "maxDuration": 40
-      }
-   }
+     ]
 }
