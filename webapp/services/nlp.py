@@ -18,7 +18,7 @@ def get_freq_dist(text_array):
     return FreqDist(tk)
     
 def get_sentiments(text_array):
-    
+    nltk.download('vader_lexicon')
     sent_a = SentimentIntensityAnalyzer()
     sents = [{'sent': sent_a.polarity_scores(
     text), 'text': text} for text in text_array]
