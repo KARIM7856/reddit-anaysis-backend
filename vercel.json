@@ -14,6 +14,7 @@
      "functions": {
       "reddit_analysis/wsgi.py": {
         "memory": 1000,
-        "maxDuration": 40 // This function can run for a maximum of 30 seconds
+        "maxDuration": 40
       }
+   }
 }
