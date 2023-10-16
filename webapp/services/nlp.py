@@ -25,7 +25,7 @@ def get_freq_dist(text_array):
 def get_sentiments(text_array):
     # nltk.download('vader_lexicon')
     #sent_a = SentimentIntensityAnalyzer()
-    sents = [{'sent': {pos: 0, neg: 0, neu: 0}, 'text': text} for text in text_array]
+    sents = [{'sent': {'pos': 0, 'neg': 0, 'neu': 0}, 'text': text} for text in text_array]
 
     most_positive = max(sents, key=lambda x: x["sent"]["pos"])
     most_negative = max(sents, key=lambda x: x["sent"]["neg"])
