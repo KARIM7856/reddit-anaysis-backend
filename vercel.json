@@ -7,7 +7,7 @@
      "routes": [
         {
             "src": "/(.*)",
-            "dest": "reddit_analysis/wsgi.py",
+            "dest": "reddit_analysis/wsgi.py"
         }
      ],
      "functions": {
