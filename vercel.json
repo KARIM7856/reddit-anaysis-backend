@@ -10,5 +10,10 @@
             "dest": "reddit_analysis/wsgi.py",
             "maxDuration": 40
         }
-     ]
+     ],
+     "functions": {
+      "reddit_analysis/wsgi.py": {
+        "memory": 1000,
+        "maxDuration": 40 // This function can run for a maximum of 30 seconds
+      }
 }
