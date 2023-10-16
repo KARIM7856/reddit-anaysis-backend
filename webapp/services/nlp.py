@@ -5,6 +5,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import TweetTokenizer
 from nltk.probability import FreqDist
 
+nltk.download('stopwords')
+
 
 def get_freq_dist(text_array):
 
